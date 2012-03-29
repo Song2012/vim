@@ -140,10 +140,10 @@ inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
 
 ":inoremap { {<CR><CR>}<UP><TAB><TAB><ESC>i
-:inoremap ( ()<LEFT>
-:map wh :VimwikiAll2HTML
-:inoremap jj <ESC>
-:map ; :
+inoremap ( ()<LEFT>
+nnoremap wh :VimwikiAll2HTML
+inoremap jj <ESC>
+nnoremap ; :
 "½ûÓÃ¹â±ê¼ü
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -153,7 +153,8 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-:nnoremap <F4> gg=G
+nnoremap <F4> gg=G
+nnoremap <tab> :tabn<CR>
 
 function! RemovePairs()
     let l:line = getline(".")
